@@ -1,0 +1,68 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        FontFamily="Semoe UI Light" FontSize="28" FontWeight="SemiBold"
+        Background="White"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
+        Title="Calculator" Height="595" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="TopTextBox"   Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="BottomTextBox" Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4"
+                 Margin="0, 0, 0, 5"/>
+
+        <Button Content="" x:Name="BlankButton" Style="{StaticResource Cyfra}" Grid.Column="1" Grid.Row="3"/>
+        <Button Click="SquareRoot" Content="√" x:Name="SqrRootButton" Style="{StaticResource Cyfra}" Grid.Column="2" Grid.Row="3"/>
+        <Button Click="Square" Content="x^2" x:Name="SqrButton" Style="{StaticResource Cyfra}" Grid.Column="3" Grid.Row="3"/>
+        <Button Click="Inverse" Content="1/x" x:Name="InverseButton" Style="{StaticResource Cyfra}" Grid.Column="4" Grid.Row="3"/>
+
+        <Button Click="Caret" Content="^" x:Name="CaretButton" Style="{StaticResource Cyfra}" Grid.Column="1" Grid.Row="4"/>
+        <Button Click="ClearDisplay" Content="C" x:Name="ClearButton" Style="{StaticResource Ważny}" Grid.Column="2" Grid.Row="4"/>
+        <Button Click="BackSpace" Content="Back" x:Name="BackButton" Style="{StaticResource Ważny}" Grid.Column="3" Grid.Row="4"/>
+        <Button Click="Divide" Content="/" x:Name="DivideButton" Style="{StaticResource Cyfra}" Grid.Column="4" Grid.Row="4"/>
+
+        <Button Tag="7" Click="DisplayNumber" Content="7" x:Name="SevenButton" Style="{StaticResource Cyfra}" Grid.Column="1" Grid.Row="5"/>
+        <Button Tag="8" Click="DisplayNumber" Content="8" x:Name="EightButton" Style="{StaticResource Cyfra}" Grid.Column="2" Grid.Row="5"/>
+        <Button Tag="9" Click="DisplayNumber" Content="9" x:Name="NineButton" Style="{StaticResource Cyfra}" Grid.Column="3" Grid.Row="5"/>
+        <Button Click="Multiply" Content="*" x:Name="MultiplyButton" Style="{StaticResource Cyfra}" Grid.Column="4" Grid.Row="5"/>
+
+        <Button Tag="4" Click="DisplayNumber" Content="4" x:Name="FourButton" Style="{StaticResource Cyfra}" Grid.Column="1" Grid.Row="6"/>
+        <Button Tag="5" Click="DisplayNumber" Content="5" x:Name="FiveButton" Style="{StaticResource Cyfra}" Grid.Column="2" Grid.Row="6"/>
+        <Button Tag="6" Click="DisplayNumber" Content="6" x:Name="SixButton" Style="{StaticResource Cyfra}" Grid.Column="3" Grid.Row="6"/>
+        <Button Click="Subtract" Content="-" x:Name="MinusButton" Style="{StaticResource Cyfra}" Grid.Column="4" Grid.Row="6"/>
+
+        <Button Tag="1" Click="DisplayNumber" Content="1" x:Name="OneButton" Style="{StaticResource Cyfra}" Grid.Column="1" Grid.Row="7"/>
+        <Button Tag="2" Click="DisplayNumber" Content="2" x:Name="TwoButton" Style="{StaticResource Cyfra}" Grid.Column="2" Grid.Row="7"/>
+        <Button Tag="3" Click="DisplayNumber" Content="3" x:Name="ThreeButton" Style="{StaticResource Cyfra}" Grid.Column="3" Grid.Row="7"/>
+        <Button Click="Add" Content="+" x:Name="PlusButton" Style="{StaticResource Cyfra}" Grid.Column="4" Grid.Row="7"/>
+
+        <Button Click="SwitchSigns" Content="+/-" x:Name="SwitchSignButton" Style="{StaticResource Cyfra}" Grid.Column="1" Grid.Row="8"/>
+        <Button Tag="0" Click="DisplayNumber" Content="0" x:Name="ZeroButton" Style="{StaticResource Cyfra}" Grid.Column="2" Grid.Row="8"/>
+        <Button Click="Decimal" Content="." x:Name="DecimalButton" Style="{StaticResource Cyfra}" Grid.Column="3" Grid.Row="8"/>
+        <Button Click="Equals" Content="=" x:Name="EqualsButton" Style="{StaticResource Ważny}" Grid.Column="4" Grid.Row="8"/>
+    </Grid>
+</Window>
